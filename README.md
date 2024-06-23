@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Tech Stack:
+    - Frontend: HTML, CSS (Bootstrap)
+    - Backend: Ruby on Rails
+    - Database: Postgresql
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+* How to run :
+  - bundle install
+  - rails db:create
+  - rails db:migrate
+  - rails s
+ 
+* Area for improvement:
+  - Implementing proper UI design
+  - Responsive
+  - In-depth prject requirement gathering
 * ...
