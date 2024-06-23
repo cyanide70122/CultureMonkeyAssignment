@@ -1,0 +1,65 @@
+// Place all the styles related to the Employees controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.table_heading{
+    border: none !important;
+    th{
+       border: none !important;
+    }
+} 
+
+
+.t_data{
+    border: 1px solid !important;
+}
+
+
+.bottom_buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom_buttons_show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+
+.table_buttons{
+    display: flex;
+    justify-content: space-evenly;
+
+    a{
+        text-decoration: none !important;
+    }
+}
+
+.card-body{
+    padding: 6vh !important;
+}
+
+.container{
+    width:130vh !important;
+    margin-top: 10vh;
+}
+
+
+.avatar{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.details{
+    font-size: 20px;
+}

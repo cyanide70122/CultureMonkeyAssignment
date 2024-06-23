@@ -1,0 +1,42 @@
+<%= render 'shared/navbar' %>
+
+
+<div class= "container">
+    <div class="card">
+        <div class="card-body employee_show">
+            <div class="row"> 
+                <div class="col col-lg-6">
+                    <p>
+                        <h2 class="card-title"><%= @employee.first_name %> <%= @employee.last_name %></h2>
+                    </p>
+                    <p class="details">
+                        <strong>Email:</strong>
+                        <%= @employee.email %>
+                    </p>
+
+                    <p class="details">
+                        <strong>Designation:</strong>
+                        <%= @employee.designation %>
+                    </p>
+
+                    <p class="details">
+                        <strong>Department:</strong>
+                        <%= @employee.department.name %>
+                    </p>
+                </div>
+                <div class="col col-lg-4">
+                    <img src="https://picsum.photos/200" alt="Avatar" class="avatar">
+                </div>
+            </div>
+
+            <div class = "bottom_buttons_show">
+                <%= link_to 'Back', employees_path , class: 'btn btn-primary'%> 
+                <%= link_to @employee, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <i class="fas fa-trash"></i> Delete
+                <% end %>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<%= render 'shared/navbar' %>
+<div class= "container">
+    <div class = "heading">
+        <h1>Bills</h1>
+        <%= link_to new_bill_path, class: 'btn btn-primary' do %>
+            <i class="fas fa-plus"></i> New Bill
+        <% end %>
+    </div>
+    <p>
+        <h3>Total Submitted:<%= @total_amount %> </h3>
+    </p>
+    <table class="table">
+        <thead>
+            <tr class="table_heading table-secondary">
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date of Submisson</th>
+                <th>Submitted By</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @bills.each do |bill| %>
+                <tr>
+                    <td class = "t_data"><%= bill.bill_type %></td>
+                    <td class = "t_data"><%= bill.amount %></td>
+                    <td class = "t_data"><%= bill.created_at.strftime("%d-%m-%Y") %></td>
+                    <td class = "t_data"><%= bill.employee.full_name %></td>
+                    <td class = "t_data"><%= bill.employee.department.name %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>

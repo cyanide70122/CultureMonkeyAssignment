@@ -1,0 +1,41 @@
+<%= render 'shared/navbar' %>
+<div class="container">
+    <h1>New Bill</h1>
+    <div class="card">
+        <div class="card-body">
+            <%= form_for @bill, url: bills_path do |form| %>
+                <div class="row mb-3">
+                    <div class="col-lg-4">
+                        <%= form.label :bill_type, class: 'form-label' %>
+                        <%= form.select :bill_type, options_for_select([['Food', 'food'], ['Travel', 'travel'], ['Others', 'others']]), {include_blank: 'Choose...'}, class: 'form-select' %>
+                    </div>
+
+                    <div class="col col-lg-4">
+                        <div class= "form-label">Amount</div>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon-amount">&#8377</span>
+                            <%= form.text_field :amount, class: 'form-control', placeholder: '', 'aria-label': 'Email', 'aria-describedby': 'basic-addon-email' %>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <%= form.label :employee_id, 'Submitted Employee', class: 'form-label' %>
+                        <%= form.collection_select :employee_id, @employees, :id, :full_name, {include_blank: 'Select Employee'}, class: 'form-select' %>
+                    </div>
+                </div>
+                <div class="bottom_buttons">
+                    
+                    <%= button_tag type: 'submit', class: 'btn btn-primary', data: { confirm: 'Are you sure?' } do %>
+                        <i class="fa-solid fa-check"></i> Generate Bill
+                    <% end %>
+
+                    <%= link_to 'Back', bills_path %>
+                        
+                    
+                </div>
+
+            <% end %>
+        </div>
+    </div>
+</div>

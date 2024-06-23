@@ -1,0 +1,36 @@
+// Place all the styles related to the Bills controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-body{
+    padding: 6vh !important;
+}
+
+.container{
+    width:130vh !important;
+
+}
+
+
+.table_heading{
+    border: none !important;
+    th{
+       border: none !important;
+    }
+} 
+
+
+.t_data{
+    border: 1px solid !important;
+}
+
+
+.bottom_buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

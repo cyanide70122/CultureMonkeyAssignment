@@ -1,0 +1,43 @@
+<%= render 'shared/navbar' %>
+
+<div class= "container">
+    <div class="heading">
+        <h1>Employees</h1>
+        <%= link_to new_employee_path, class: 'btn btn-primary' do %>
+            <i class="fas fa-plus"></i> New Employee
+        <% end %>
+
+    </div>
+    <table class="table">
+        <thead>
+            <tr class = "table_heading table-secondary">
+                <th>Full Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @employees.each do |employee| %>
+                <tr>
+                    <td class = "t_data"><%= employee.first_name %> <%= employee.last_name %></td>
+                    <td class = "t_data"><%= employee.designation %></td>
+                    <td class = "t_data"><%= employee.department.name %></td>
+                    <td class = "t_data table_buttons">
+                        <%= link_to employee, class: 'btn ' do %>
+                            <i class="fa-solid fa-eye"></i>View
+                        <% end %>
+
+                        <%= link_to edit_employee_path(employee), class: 'btn' do %>
+                            <i class="fa-solid fa-pen-to-square"></i>Edit
+                        <% end %>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+
+
+
